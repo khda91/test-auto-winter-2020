@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Common suite">
+
+    <suite-files>
+        <suite-file path="CalculatorMultiplyDivideSuite.xml"/>
+        <suite-file path="CalculatorSumSubstractSuite.xml"/>
+    </suite-files>
+
+</suite>

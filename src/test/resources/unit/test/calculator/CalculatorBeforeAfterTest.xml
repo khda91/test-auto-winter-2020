@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Calculator before after Test">
+
+    <test name="Before After Annotation Test1">
+        <classes>
+            <class name="ru.levelup.qa.at.unit.test.calculator.CalculatorMultiplyDivideTest"/>
+        </classes>
+    </test>
+
+    <test name="Before After Annotation Test2">
+        <classes>
+            <class name="ru.levelup.qa.at.unit.test.calculator.CalculatorSumSubstractTest"/>
+        </classes>
+    </test>
+
+</suite>
