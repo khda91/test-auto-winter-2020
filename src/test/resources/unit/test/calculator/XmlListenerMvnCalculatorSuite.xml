@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Xml Listener Mvn Calculator">
+
+    <test name="Xml Listener Mvn Calculator">
+        <classes>
+            <class name="ru.levelup.qa.at.unit.test.calculator.XmlListenerMvnCalculatorTest"/>
+        </classes>
+    </test>
+
+</suite>

@@ -1,6 +1,6 @@
 package ru.levelup.qa.at.unit.test.calculator.it;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import static org.testng.Assert.assertEquals;
 

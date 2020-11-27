@@ -1,46 +1,51 @@
 package ru.levelup.qa.at.unit.test.calculator.it;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeGroups;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
 import ru.levelup.qa.at.unit.test.calculator.Calculator;
 
 import static org.testng.Assert.assertEquals;
 
-public class CalculatorGroupsIT {
+public class CalculatorSimple01IT {
 
     Calculator calculator;
 
-    @BeforeGroups(groups = {"simpleOperations"})
-    public void beforeGroup() {
-        System.out.println("before group method");
+    @BeforeClass
+    public static void beforeClass() {
+        System.out.println("before Class method");
     }
 
-    @BeforeMethod(alwaysRun = true)
+    @Before
     public void setUp() {
-        System.out.println(this.getClass().getName() + " set up method");
+        System.out.println("set up method");
         calculator = new Calculator();
     }
 
-    @Test(groups = {"simpleOperations"})
+    @Test
     public void testSum() {
         System.out.println("testSum method");
         double actual = calculator.sum(4, 4);
         assertEquals(actual, 8);
     }
 
-    @Test(groups = {"simpleOperations"})
+    @Test
     public void testMultiply() {
         System.out.println("testMultiply method");
         double actual = calculator.multiply(4, 4);
         assertEquals(actual, 16);
     }
 
-    @AfterMethod
+    @After
     public void tearDown() {
-        System.out.println(this.getClass().getName() + " tear down method");
+        System.out.println("tear down method");
         calculator = null;
     }
 
+    @AfterClass
+    public static void afterClass() {
+        System.out.println("after Class method");
+    }
 }

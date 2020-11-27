@@ -1,9 +1,8 @@
 package ru.levelup.qa.at.unit.test.calculator.it;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeGroups;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 import ru.levelup.qa.at.unit.test.calculator.Calculator;
 
 import static org.testng.Assert.assertEquals;
@@ -12,32 +11,27 @@ public class CalculatorGroups1IT {
 
     Calculator calculator;
 
-    @BeforeGroups(groups = {"simpleOperations", "trig"})
-    public void beforeGroup() {
-        System.out.println("before group method");
-    }
-
-    @BeforeMethod(alwaysRun = true)
+    @Before
     public void setUp() {
         System.out.println(this.getClass().getName() + " set up method");
         calculator = new Calculator();
     }
 
-    @Test(groups = {"simpleOperations", "trig"})
+    @Test
     public void testCos() {
         System.out.println("testCos method");
         double actual = calculator.cos(4);
         assertEquals(actual, Math.cos(4));
     }
 
-    @Test(groups = {"simpleOperations", "trig"})
+    @Test
     public void testCosNeg() {
         System.out.println("testCos method");
         double actual = calculator.cos(4);
         assertEquals(actual, Math.cos(4));
     }
 
-    @AfterMethod
+    @After
     public void tearDown() {
         System.out.println(this.getClass().getName() + " tear down method");
         calculator = null;

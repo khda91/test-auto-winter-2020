@@ -1,15 +1,15 @@
 package ru.levelup.qa.at.unit.test.calculator.it;
 
-import org.junit.AfterClass;
 import org.junit.After;
-import org.junit.BeforeClass;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import ru.levelup.qa.at.unit.test.calculator.Calculator;
 
 import static org.testng.Assert.assertEquals;
 
-public class CalculatorSimpleIT {
+public class CalculatorSimple03IT {
 
     Calculator calculator;
 

@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Parametrized Calculator">
+
+    <test name="Parametrized Calculator exclude multiply">
+        <parameter name="a" value="2.0"/>
+        <parameter name="b" value="6.0"/>
+        <parameter name="expected" value="8.0"/>
+        <classes>
+            <class name="ru.levelup.qa.at.unit.test.calculator.ParametrizedCalculatorTest">
+                <methods>
+                    <exclude name="parametrizedMultiplyTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Parametrized Calculator include multiply">
+        <parameter name="a" value="2.0"/>
+        <parameter name="b" value="6.0"/>
+        <parameter name="expected" value="12.0"/>
+        <classes>
+            <class name="ru.levelup.qa.at.unit.test.calculator.ParametrizedCalculatorTest">
+                <methods>
+                    <include name="parametrizedMultiplyTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Parametrized Calculator include multiply withoout a value">
+        <parameter name="b" value="6.0"/>
+        <parameter name="expected" value="18.0"/>
+        <classes>
+            <class name="ru.levelup.qa.at.unit.test.calculator.ParametrizedCalculatorTest">
+                <methods>
+                    <include name="parametrizedMultiplyTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

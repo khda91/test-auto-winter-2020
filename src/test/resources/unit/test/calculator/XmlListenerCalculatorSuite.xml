@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Xml Listener Calculator">
+
+    <listeners>
+        <listener class-name="ru.levelup.qa.at.unit.test.calculator.SimpleListener"/>
+    </listeners>
+
+    <test name="Xml Listener Calculator">
+        <classes>
+            <class name="ru.levelup.qa.at.unit.test.calculator.XmlListenerCalculatorTest"/>
+        </classes>
+    </test>
+
+</suite>
