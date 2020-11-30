@@ -15,6 +15,8 @@
         <testng.version>7.3.0</testng.version>
         <junit.version>4.13.1</junit.version>
 <!--        <springframework.verson>5.3.1</springframework.verson>-->
+        <selenium-java.version>3.141.59</selenium-java.version>
+        <webdrivermanager.version>4.2.2</webdrivermanager.version>
 
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
@@ -34,6 +36,18 @@
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium-java.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${webdrivermanager.version}</version>
         </dependency>
 
 <!--        <dependency>-->
