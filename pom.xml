@@ -17,6 +17,7 @@
 <!--        <springframework.verson>5.3.1</springframework.verson>-->
         <selenium-java.version>3.141.59</selenium-java.version>
         <webdrivermanager.version>4.2.2</webdrivermanager.version>
+        <commons-io.version>2.8.0</commons-io.version>
 
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
@@ -50,7 +51,14 @@
             <version>${webdrivermanager.version}</version>
         </dependency>
 
-<!--        <dependency>-->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+        </dependency>
+
+
+        <!--        <dependency>-->
 <!--            <groupId>org.springframework</groupId>-->
 <!--            <artifactId>spring-core</artifactId>-->
 <!--            <version>${springframework.verson}</version>-->
