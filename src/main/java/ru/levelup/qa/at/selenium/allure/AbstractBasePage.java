@@ -1,5 +1,6 @@
 package ru.levelup.qa.at.selenium.allure;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -31,6 +32,7 @@ public abstract class AbstractBasePage extends AbstractComponent {
         }
     }
 
+    @Step("Открытие категории '{categoryName}'")
     public void selectCategory(String categoryName) {
         header.selectCategory(categoryName);
     }

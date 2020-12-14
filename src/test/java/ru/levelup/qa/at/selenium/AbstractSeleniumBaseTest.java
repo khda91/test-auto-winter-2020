@@ -6,13 +6,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import ru.levelup.qa.at.selenium.allure.utils.AllurePropertiesGenerator;
 
 public abstract class AbstractSeleniumBaseTest {
 
-    protected WebDriver driver;
+    protected static WebDriver driver;
 
     @BeforeSuite
     public void setUpSuite() {
+        AllurePropertiesGenerator.createAllureProperties();
         WebDriverManager.chromedriver().setup();
     }
 
@@ -24,5 +26,9 @@ public abstract class AbstractSeleniumBaseTest {
     @AfterMethod
     public void tearDown() {
         driver.quit();
+    }
+
+    public static WebDriver getDriver() {
+        return driver;
     }
 }

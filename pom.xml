@@ -138,9 +138,11 @@
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
-                    <systemPropertyVariables>
-                        <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
-                    </systemPropertyVariables>
+<!--                    <systemPropertyVariables>-->
+<!--                        <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>-->
+<!--                        <allure.link.tms.pattern>https://levelp.jira.ru/browse/{}</allure.link.tms.pattern>-->
+<!--                        <allure.link.issue.pattern>https://levelp.jira.ru/browse/{}</allure.link.issue.pattern>-->
+<!--                    </systemPropertyVariables>-->
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -165,6 +167,7 @@
                 <version>2.10.0</version>
                 <configuration>
                     <reportVersion>${allure.version}</reportVersion>
+<!--                    <resultsDirectory>${project.basedir}/allure-results</resultsDirectory>-->
                 </configuration>
             </plugin>
 

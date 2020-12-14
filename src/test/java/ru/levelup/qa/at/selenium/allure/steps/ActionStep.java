@@ -16,6 +16,7 @@ public class ActionStep extends BaseStepClass {
     @Step("Открытие главной странице Яндекс Маркета")
     public void openYandexMarketMainPage() {
         yandexMarketIndexPage.open();
+        Allure.addAttachment("главной", "text/html", driver.getPageSource(), ".html");
     }
 
     @Step("Открытие категории '{category}' и подкатегории '{1}'")

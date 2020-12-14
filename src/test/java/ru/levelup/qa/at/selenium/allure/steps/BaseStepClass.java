@@ -8,7 +8,7 @@ import ru.levelup.qa.at.selenium.allure.YandexMarketIndexPage;
 
 public abstract class BaseStepClass {
 
-    private WebDriver driver;
+    protected WebDriver driver;
 
     YandexMarketIndexPage yandexMarketIndexPage;
     YandexMarketCategoryPage yandexMarketCategoryPage;
