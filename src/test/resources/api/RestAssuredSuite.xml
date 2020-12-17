@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Allure Rest Assured">
+
+    <test name="Allure Tests">
+        <classes>
+            <class name="ru.levelup.qa.at.api.simple.RestAssuredSimpleExampleTest"/>
+            <class name="ru.levelup.qa.at.api.config.RestAssuredSpecificationTest"/>
+            <class name="ru.levelup.qa.at.api.objects.DeleteBookingRestAssuredTest"/>
+            <class name="ru.levelup.qa.at.api.objects.SerializationDeserializationRestAssuredTest"/>
+        </classes>
+    </test>
+
+</suite>

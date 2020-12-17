@@ -21,6 +21,7 @@
         <hamcrest.version>2.2</hamcrest.version>
         <aspectj.version>1.8.10</aspectj.version>
         <allure.version>2.13.7</allure.version>
+        <rest-assured.version>4.3.3</rest-assured.version>
 
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
@@ -71,6 +72,19 @@
             <artifactId>hamcrest</artifactId>
             <version>${hamcrest.version}</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest-assured.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-rest-assured</artifactId>
+            <version>${allure.version}</version>
         </dependency>
 
         <!--        <dependency>-->
@@ -132,7 +146,8 @@
 <!--                        <include>**/CalculatorSimple*IT.class</include>-->
 <!--                    </includes>-->
                     <suiteXmlFiles>
-                        <suiteXmlFile>${project.basedir}/src/test/resources/SeleniumAllureSuite.xml</suiteXmlFile>
+<!--                        <suiteXmlFile>${project.basedir}/src/test/resources/SeleniumAllureSuite.xml</suiteXmlFile>-->
+                        <suiteXmlFile>${project.basedir}/src/test/resources/api/RestAssuredSuite.xml</suiteXmlFile>
                     </suiteXmlFiles>
 
                     <argLine>
