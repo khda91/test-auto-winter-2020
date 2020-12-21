@@ -6,29 +6,32 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import ru.levelup.qa.at.design.patterns.factory.WebDriverSingleton;
 import ru.levelup.qa.at.selenium.allure.utils.AllurePropertiesGenerator;
 
 public abstract class AbstractSeleniumBaseTest {
 
-    protected static WebDriver driver;
+//    protected static WebDriver driver;
+    protected WebDriver driver;
 
     @BeforeSuite
     public void setUpSuite() {
+        System.setProperty("browser.name", "chrome");
         AllurePropertiesGenerator.createAllureProperties();
-        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.chromedriver().setup();
     }
 
     @BeforeMethod
     public void setUp() {
-        driver = new ChromeDriver();
+        driver = WebDriverSingleton.getWebDriver();
     }
 
     @AfterMethod
     public void tearDown() {
-        driver.quit();
+        WebDriverSingleton.closeDriver();
     }
 
-    public static WebDriver getDriver() {
-        return driver;
-    }
+//    public static WebDriver getDriver() {
+//        return driver;
+//    }
 }

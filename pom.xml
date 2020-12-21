@@ -147,7 +147,8 @@
 <!--                    </includes>-->
                     <suiteXmlFiles>
 <!--                        <suiteXmlFile>${project.basedir}/src/test/resources/SeleniumAllureSuite.xml</suiteXmlFile>-->
-                        <suiteXmlFile>${project.basedir}/src/test/resources/api/RestAssuredSuite.xml</suiteXmlFile>
+<!--                        <suiteXmlFile>${project.basedir}/src/test/resources/api/RestAssuredSuite.xml</suiteXmlFile>-->
+                        <suiteXmlFile>${project.basedir}src/test/resources/design/patterns/singleton/DesignPatternsSingletonSuite.xml</suiteXmlFile>
                     </suiteXmlFiles>
 
                     <argLine>

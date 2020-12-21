@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Singleton Rest Assured">
+
+    <test name="Singleton Tests">
+        <classes>
+            <class name="ru.levelup.qa.at.design.patterns.singleton.SingletonExample1Test"/>
+            <class name="ru.levelup.qa.at.design.patterns.singleton.SingletonExample2Test"/>
+        </classes>
+    </test>
+
+</suite>

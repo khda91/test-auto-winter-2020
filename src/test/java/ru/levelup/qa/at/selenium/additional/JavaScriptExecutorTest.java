@@ -35,7 +35,6 @@ public class JavaScriptExecutorTest extends AbstractSeleniumBaseTest {
 
         assertTrue(userDropdown.isDisplayed());
 
-
         JavascriptExecutor jse = (JavascriptExecutor) this.driver;
         jse.executeScript("arguments[0].click();", userDropdown);
 
